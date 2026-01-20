@@ -1,0 +1,22 @@
+{
+  "name": "gift-palace-shopify-theme",
+  "version": "1.0.0",
+  "description": "Shopify theme for Gift Palace",
+  "main": "index.js",
+  "scripts": {
+    "shopify:login": "shopify login",
+    "shopify:serve": "shopify theme serve",
+    "shopify:pull": "shopify theme pull",
+    "shopify:push": "shopify theme push"
+  },
+  "keywords": [
+    "shopify",
+    "theme"
+  ],
+  "author": "Gift Palace",
+  "license": "MIT",
+  "devDependencies": {
+    "@shopify/cli": "^3.0.0",
+    "@shopify/theme": "^3.0.0"
+  }
+}
