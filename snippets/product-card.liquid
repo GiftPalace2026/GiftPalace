@@ -201,16 +201,12 @@
                     </span>
                 </a>
                 {% assign subheading = product_card_product.metafields.custom.product_subheading.value %}
-                    {% if subheading != blank %}
+                {% if subheading != blank %}
                     <div class="product-subheading">
                         {{ subheading }}
                     </div>
                 {% endif %}
-                {%- if product_card_product.metafields.custom.zodiac_date -%}
-                    <p class="product-card-zodiac-date">{{ product_card_product.metafields.custom.zodiac_date }}</p>
-                {%- elsif product_card_product.title contains 'Virgo' -%}
-                    <p class="product-card-zodiac-date">23rd aug - 22 sep</p>
-                {%- endif -%}
+
 
 
 
