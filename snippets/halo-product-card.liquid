@@ -146,6 +146,11 @@
                         {% endif %}
                     </span>
                 </a>
+                {%- if product.metafields.custom.zodiac_date -%}
+                    <p class="product-card-zodiac-date">{{ product.metafields.custom.zodiac_date }}</p>
+                {%- elsif product.title contains 'Virgo' -%}
+                    <p class="product-card-zodiac-date">23rd aug - 22 sep</p>
+                {%- endif -%}
                 <div class="card-price">
                     {% render 'price',
                         product: product,

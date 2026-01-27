@@ -1433,6 +1433,15 @@
     line-height: 1.2;
 }
 
+.product-card-zodiac-date {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: #666;
+    margin: 4px 0 0 0;
+    line-height: 1.2;
+}
+
 .productView-meta {
     font-size: 0;
     letter-spacing: 0;
