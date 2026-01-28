@@ -6278,14 +6278,14 @@ body.is-custom-information .background-overlay {
 
 /* START: Luxury Aesthetics Enhancement */
 /* 1. Negative Space (Less is More) - Giving sections room to breathe */
-.template-index .shopify-section {
+.template-index #MainContent .shopify-section {
     padding-top: 100px !important;
     /* Premium spacing on desktop */
     padding-bottom: 20px !important;
 }
 
 @media (max-width: 1024px) {
-    .template-index .shopify-section {
+    .template-index #MainContent .shopify-section {
         padding-top: 60px !important;
         /* Premium spacing on tablet/mobile */
         padding-bottom: 10px !important;
