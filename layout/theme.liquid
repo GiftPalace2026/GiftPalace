@@ -46,9 +46,7 @@
         {%- comment -%} Structured Data for SEO {%- endcomment -%}
         {% render 'schema-organization' %}
         {% render 'schema-breadcrumbs' %}
-        {%- if template.name == 'product' -%}
-          {% render 'schema-product' %}
-        {%- endif -%}
+
         {{ content_for_header }}
 
         {% render 'variable' %}

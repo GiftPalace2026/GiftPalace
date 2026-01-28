@@ -30,12 +30,16 @@
 {%- endif -%}
 
 {%- if request.page_type == 'product' -%}
-  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html | remove: ',' }}">
   <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
   <meta property="product:availability" content="{% if product.available %}in stock{% else %}out of stock{% endif %}">
   <meta property="product:condition" content="new">
-  <meta property="product:retailer_item_id" content="{{ product.selected_or_first_available_variant.sku }}">
+  <meta property="product:retailer_item_id" content="{{ product.selected_or_first_available_variant.sku | default: product.id }}">
+  <meta property="product:brand" content="{{ product.vendor | escape }}">
+  <meta property="product:price:amount" content="{{ product.price | money_without_currency | strip_html | remove: ',' }}">
+  <meta property="product:price:currency" content="{{ cart.currency.iso_code }}">
 {%- endif -%}
+
 
 {%- if settings.social_twitter_link != blank -%}
   <meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
