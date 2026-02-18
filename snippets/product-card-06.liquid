@@ -196,6 +196,78 @@
                         {% endif %}
                     </span>
                 </a>
+                </a>
+
+                {%- comment -%} Celestial Heirlooms Zodiac Signs {%- endcomment -%}
+                {% assign product_title_downcase = product_card_product.title | downcase %}
+                {% assign show_zodiac = false %}
+                {% assign zodiac_sign = '' %}
+                {% assign zodiac_dates = '' %}
+
+                {% if product_title_downcase contains 'aries' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♈ Aries' %}
+                  {% assign zodiac_dates = 'March 21 to April 19' %}
+                {% elsif product_title_downcase contains 'taurus' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♉ Taurus' %}
+                  {% assign zodiac_dates = 'April 20 to May 20' %}
+                {% elsif product_title_downcase contains 'gemini' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♊ Gemini' %}
+                  {% assign zodiac_dates = 'May 21 to June 20' %}
+                {% elsif product_title_downcase contains 'cancer' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♋ Cancer' %}
+                  {% assign zodiac_dates = 'June 21 to July 22' %}
+                {% elsif product_title_downcase contains 'leo' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♌ Leo' %}
+                  {% assign zodiac_dates = 'July 23 to August 22' %}
+                {% elsif product_title_downcase contains 'virgo' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♍ Virgo' %}
+                  {% assign zodiac_dates = 'August 23 to September 22' %}
+                {% elsif product_title_downcase contains 'libra' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♎ Libra' %}
+                  {% assign zodiac_dates = 'September 23 to October 22' %}
+                {% elsif product_title_downcase contains 'scorpio' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♏ Scorpio' %}
+                  {% assign zodiac_dates = 'October 23 to November 21' %}
+                {% elsif product_title_downcase contains 'sagittarius' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♐ Sagittarius' %}
+                  {% assign zodiac_dates = 'November 22 to December 21' %}
+                {% elsif product_title_downcase contains 'capricorn' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♑ Capricorn' %}
+                  {% assign zodiac_dates = 'December 22 to January 19' %}
+                {% elsif product_title_downcase contains 'aquarius' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♒ Aquarius' %}
+                  {% assign zodiac_dates = 'January 20 to February 18' %}
+                {% elsif product_title_downcase contains 'pisces' %}
+                  {% assign show_zodiac = true %}
+                  {% assign zodiac_sign = '♓ Pisces' %}
+                  {% assign zodiac_dates = 'February 19 to March 20' %}
+                {% endif %}
+
+                {% assign subheading = product_card_product.metafields.custom.subheading %}
+                {% if subheading == blank %}
+                  {% assign subheading = product_card_product.metafields.custom.product_subheading %}
+                {% endif %}
+
+                {%- if show_zodiac -%}
+                    <div class="product-subheading card-subheading zodiac-subheading">
+                        {{ zodiac_sign }} – {{ zodiac_dates }}
+                    </div>
+                {%- elsif subheading != blank -%}
+                    <div class="card-subheading">
+                        {{ subheading }}
+                    </div>
+                {%- endif -%}
 <!-- Start of Judge.me code --> 
       <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
         {{ product.metafields.judgeme.badge }}
