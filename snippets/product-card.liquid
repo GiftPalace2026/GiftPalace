@@ -351,6 +351,9 @@
                   {%- comment %} Hawk's Eye - Vision & Strength {%- endcomment -%}
                   {% elsif product_title_downcase contains "hawk's eye" or product_title_downcase contains 'hawks eye' or product_title_downcase contains 'hawk eye' %}
                     {% assign healing_benefits = 'Vision | Strength | Stability' %}
+                  {%- comment %} Selenite - Cleanse & Purify {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'selenite' %}
+                    {% assign healing_benefits = 'Cleanse | Purify | Protect' %}
                   {%- comment %} Agate - Balance & Harmony {%- endcomment -%}
                   {% elsif product_title_downcase contains 'agate' %}
                     {% assign healing_benefits = 'Balance | Harmony | Protection' %}
