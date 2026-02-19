@@ -262,9 +262,57 @@
                   {% assign zodiac_dates = 'February 19 to March 20' %}
                 {% endif %}
 
+                {%- comment -%} Bracelet Subheadings {%- endcomment -%}
+                {% assign product_type_downcase = product_card_product.product_type | downcase %}
+                {% assign show_bracelet_info = false %}
+                {% assign bracelet_info = '' %}
+
+                {% if product_type_downcase contains 'bracelet' or product_title_downcase contains 'bracelet' %}
+                  {% assign show_bracelet_info = true %}
+                  {%- comment %} Extract size if present in title {%- endcomment -%}
+                  {% if product_title_downcase contains '6 inch' or product_title_downcase contains '6"' %}
+                    {% assign bracelet_info = '6" Size' %}
+                  {% elsif product_title_downcase contains '7 inch' or product_title_downcase contains '7"' %}
+                    {% assign bracelet_info = '7" Size' %}
+                  {% elsif product_title_downcase contains '8 inch' or product_title_downcase contains '8"' %}
+                    {% assign bracelet_info = '8" Size' %}
+                  {% elsif product_title_downcase contains '6.5 inch' or product_title_downcase contains '6.5"' %}
+                    {% assign bracelet_info = '6.5" Size' %}
+                  {% elsif product_title_downcase contains '6-7 inch' or product_title_downcase contains '6-7"' %}
+                    {% assign bracelet_info = 'Adjustable 6-7"' %}
+                  {% elsif product_title_downcase contains '7-8 inch' or product_title_downcase contains '7-8"' %}
+                    {% assign bracelet_info = 'Adjustable 7-8"' %}
+                  {% endif %}
+
+                  {%- comment %} Add material to bracelet info {%- endcomment -%}
+                  {% if product_title_downcase contains 'gold' %}
+                    {% if bracelet_info != '' %}
+                      {% assign bracelet_info = bracelet_info | append: ' | 14K Gold' %}
+                    {% else %}
+                      {% assign bracelet_info = '14K Gold Plated' %}
+                    {% endif %}
+                  {% elsif product_title_downcase contains 'rose gold' %}
+                    {% if bracelet_info != '' %}
+                      {% assign bracelet_info = bracelet_info | append: ' | Rose Gold' %}
+                    {% else %}
+                      {% assign bracelet_info = 'Rose Gold Plated' %}
+                    {% endif %}
+                  {% elsif product_title_downcase contains 'silver' %}
+                    {% if bracelet_info != '' %}
+                      {% assign bracelet_info = bracelet_info | append: ' | Sterling Silver' %}
+                    {% else %}
+                      {% assign bracelet_info = 'Sterling Silver' %}
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+
                 {% if show_zodiac %}
                     <div class="product-subheading card-subheading zodiac-subheading">
                         {{ zodiac_dates }}
+                    </div>
+                {% elsif show_bracelet_info and bracelet_info != blank %}
+                    <div class="product-subheading card-subheading bracelet-subheading">
+                        {{ bracelet_info }}
                     </div>
                 {% elsif subheading != blank %}
                     <div class="product-subheading card-subheading">
