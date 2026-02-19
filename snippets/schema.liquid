@@ -5,6 +5,7 @@
 {%- if page_type == 'product' -%}
     {%- liquid
         assign fa_current_variant = product.selected_or_first_available_variant
+        assign gtin = fa_current_variant.barcode
     -%}
     <script type="application/ld+json">
     {
@@ -20,10 +21,14 @@
         "description": {{ product.description | strip_html | truncate: 5000 | json }},
         "sku": {{ fa_current_variant.sku | default: product.id | json }},
         "mpn": {{ fa_current_variant.sku | default: product.id | json }},
+        {%- if gtin != blank and gtin.size >= 8 -%}
+        "gtin": {{ gtin | json }},
+        {%- endif -%}
         "brand": {
             "@type": "Brand",
             "name": {{ product.vendor | json }}
         },
+        "category": {{ product.product_type | json }},
         {%- if product.metafields.reviews.rating.value != blank or product.metafields.judgeme.badge != blank -%}
           {%- if product.metafields.reviews.rating.value != blank -%}
             "aggregateRating": {

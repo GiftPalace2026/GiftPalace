@@ -1,0 +1,130 @@
+{%- if request.page_type == 'product' -%}
+  {%- capture seo_keywords -%}
+    | Natural Gemstones | Healing Crystals | Certified Crystals | metaphysical stones
+  {%- endcapture -%}
+
+  {%- assign product_type = product.product_type | downcase -%}
+  {%- assign product_vendor = product.vendor | downcase -%}
+
+  {%- capture seo_intro -%}
+    Buy authentic {{ product.title }} - certified natural gemstone. Premium quality healing crystals, spiritual jewelry & metaphysical stones.
+  {%- endcapture -%}
+
+  {%- comment %} SEO Keywords for different product types {%- endcomment -%}
+  {%- if product_type contains 'pyrite' or product.title contains 'Pyrite' or product.title contains 'pyrite' -%}
+    {%- capture seo_intro -%}
+      Authentic Pyrite - {{ product.title }}. Natural Pyrite healing crystals for protection & abundance. Certified genuine Pyrite specimens.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Pyrite | Pyrite Crystal | Gold Pyrite | Healing Crystals | Protection Stone | Abundance Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'amethyst' or product.title contains 'Amethyst' -%}
+    {%- capture seo_intro -%}
+      Premium Amethyst - {{ product.title }}. Natural Amethyst healing crystals for spiritual healing & meditation. Certified genuine Amethyst.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Amethyst | Amethyst Crystal | Healing Crystals | Spiritual Crystal | Meditation Stone | Purple Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'quartz' or product.title contains 'Quartz' -%}
+    {%- capture seo_intro -%}
+      Natural Clear Quartz - {{ product.title }}. Powerful healing crystals & energy amplifier. Certified genuine Clear Quartz point.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Clear Quartz | Crystal Quartz | Healing Crystals | Energy Crystal | Meditation Stone
+    {%- endcapture -%}
+  {%- elsif product_type contains 'citrine' or product.title contains 'Citrine' -%}
+    {%- capture seo_intro -%}
+      Solar Citrine Crystal - {{ product.title }}. Abundance & prosperity healing crystals. Certified natural Citrine gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Citrine | Citrine Crystal | Healing Crystals | Abundance Crystal | Prosperity Stone | Yellow Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'obsidian' or product.title contains 'Obsidian' -%}
+    {%- capture seo_intro -%}
+      Protective Obsidian - {{ product.title }}. Powerful grounding healing crystals for protection. Certified natural Black Obsidian.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Obsidian | Black Obsidian | Healing Crystals | Protection Crystal | Grounding Stone | Volcanic Glass
+    {%- endcapture -%}
+  {%- elsif product_type contains 'tiger' or product.title contains 'Tiger' -%}
+    {%- capture seo_intro -%}
+      Tiger's Eye Stone - {{ product.title }}. Balancing healing crystals for courage & confidence. Certified genuine Tiger's Eye.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Tiger Eye | Tiger's Eye | Healing Crystals | Balancing Crystal | Courage Stone | Brown Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'rose' or product.title contains 'Rose' -%}
+    {%- capture seo_intro -%}
+      Rose Quartz Heart - {{ product.title }}. Love & compassion healing crystals. Certified natural Rose Quartz gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Rose Quartz | Pink Quartz | Healing Crystals | Love Crystal | Heart Stone | Pink Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'jade' or product.title contains 'Jade' -%}
+    {%- capture seo_intro -%}
+      Sacred Jade Stone - {{ product.title }}. Prosperity & luck healing crystals. Certified natural Jade gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Jade | Jade Crystal | Healing Crystals | Prosperity Stone | Lucky Stone | Green Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'turquoise' or product.title contains 'Turquoise' -%}
+    {%- capture seo_intro -%}
+      Authentic Turquoise - {{ product.title }}. Protective healing crystals & communication stone. Certified natural Turquoise.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Turquoise | Turquoise Crystal | Healing Crystals | Protection Crystal | Communication Stone | Blue Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'opal' or product.title contains 'Opal' -%}
+    {%- capture seo_intro -%}
+      Magical Opal Stone - {{ product.title }}. Inspiration & creativity healing crystals. Certified natural Opal gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Opal | Opal Crystal | Healing Crystals | Inspiration Crystal | Creativity Stone | Rainbow Stone
+    {%- endcapture -%}
+  {%- elsif product_type contains 'lapis' or product.title contains 'Lapis' -%}
+    {%- capture seo_intro -%}
+      Lapis Lazuli Deep - {{ product.title }}. Wisdom & truth healing crystals. Certified natural Lapis Lazuli gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Lapis Lazuli | Lapis | Healing Crystals | Wisdom Stone | Blue Crystal | Third Eye Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'emerald' or product.title contains 'Emerald' -%}
+    {%- capture seo_intro -%}
+      Royal Emerald Gemstone - {{ product.title }}. Healing & rebirth crystals. Certified natural Colombian Emerald.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Emerald | Emerald Gemstone | Healing Crystals | Green Crystal | May Birthstone | Royal Stone
+    {%- endcapture -%}
+  {%- elsif product_type contains 'sapphire' or product.title contains 'Sapphire' -%}
+    {%- capture seo_intro -%}
+      Blue Sapphire Stone - {{ product.title }}. Wisdom & spiritual healing crystals. Certified natural Sapphire gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Sapphire | Blue Sapphire | Healing Crystals | Wisdom Crystal | September Birthstone | Blue Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'ruby' or product.title contains 'Ruby' -%}
+    {%- capture seo_intro -%}
+      Ruby Gemstone - {{ product.title }}. Passion & energy healing crystals. Certified natural Ruby gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Ruby | Ruby Gemstone | Healing Crystals | Passion Crystal | July Birthstone | Red Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'garnet' or product.title contains 'Garnet' -%}
+    {%- capture seo_intro -%}
+      Garnet Stone - {{ product.title }}. Energizing & protective healing crystals. Certified natural Garnet gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Garnet | Garnet Crystal | Healing Crystals | Protection Crystal | January Birthstone | Red Crystal
+    {%- endcapture -%}
+  {%- elsif product_type contains 'aquamarine' or product.title contains 'Aquamarine' -%}
+    {%- capture seo_intro -%}
+      Aquamarine Blue - {{ product.title }}. Calming & soothing healing crystals. Certified natural Aquamarine gemstone.
+    {%- endcapture -%}
+    {%- capture seo_keywords -%}
+      | Aquamarine | Aquamarine Crystal | Healing Crystals | Calming Crystal | March Birthstone | Blue Crystal
+    {%- endcapture -%}
+  {%- endif -%}
+
+  {%- assign page_title = page_title | append: seo_keywords -%}
+  {%- assign page_description = seo_intro | append: page_description | truncate: 300 -%}
+{%- endif -%}
