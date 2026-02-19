@@ -6336,6 +6336,15 @@ body.is-custom-information .background-overlay {
 }
 
 /* END: Luxury Aesthetics Enhancement */
+
+/* Remove space between header and banner */
+.halo-banner-adv,
+.halo-banner-image,
+.wrapper-hasbanner-adv {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
 /* Product Card Subheading */
 .card-subheading,
 .product-subheading {
