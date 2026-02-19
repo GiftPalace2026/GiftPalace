@@ -312,6 +312,8 @@
                     {% assign healing_benefits = 'Emotional Healing | Passion | Vitality' %}
                   {% elsif product_title_downcase contains 'onyx' %}
                     {% assign healing_benefits = 'Protection | Strength | Self-Control' %}
+                  {% elsif product_title_downcase contains 'green aventurine' or product_title_downcase contains 'aventurine' %}
+                    {% assign healing_benefits = 'Stone Of Opportunities | Attracts Luck | Growth' %}
                   {% elsif product_title_downcase contains 'agate' %}
                     {% assign healing_benefits = 'Balance | Harmony | Protection' %}
                   {% elsif product_title_downcase contains 'malachite' %}

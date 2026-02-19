@@ -339,6 +339,9 @@
                   {%- comment %} Onyx - Protection & Strength {%- endcomment -%}
                   {% elsif product_title_downcase contains 'onyx' %}
                     {% assign healing_benefits = 'Protection | Strength | Self-Control' %}
+                  {%- comment %} Green Aventurine - Luck & Opportunities {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'green aventurine' or product_title_downcase contains 'aventurine' %}
+                    {% assign healing_benefits = 'Stone Of Opportunities | Attracts Luck | Growth' %}
                   {%- comment %} Agate - Balance & Harmony {%- endcomment -%}
                   {% elsif product_title_downcase contains 'agate' %}
                     {% assign healing_benefits = 'Balance | Harmony | Protection' %}
