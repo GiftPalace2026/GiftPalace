@@ -318,6 +318,8 @@
                     {% assign healing_benefits = 'Protection | Balance | Power' %}
                   {% elsif product_title_downcase contains 'carnelian' %}
                     {% assign healing_benefits = 'Strength | Creativity | Ambition' %}
+                  {% elsif product_title_downcase contains "hawk's eye" or product_title_downcase contains 'hawks eye' or product_title_downcase contains 'hawk eye' %}
+                    {% assign healing_benefits = 'Vision | Strength | Stability' %}
                   {% elsif product_title_downcase contains 'agate' %}
                     {% assign healing_benefits = 'Balance | Harmony | Protection' %}
                   {% elsif product_title_downcase contains 'malachite' %}
