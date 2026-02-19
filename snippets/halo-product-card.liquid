@@ -267,6 +267,10 @@
                     {% assign healing_benefits = 'Cleanse | Purify | Protect' %}
                   {% elsif product_title_downcase contains 'sodalite' %}
                     {% assign healing_benefits = 'Clarity | Confidence | Communication' %}
+                  {% elsif product_title_downcase contains 'sunstone' %}
+                    {% assign healing_benefits = 'Joy | Confidence | Success' %}
+                  {% elsif product_title_downcase contains "cat's eye" or product_title_downcase contains 'cats eye' or product_title_downcase contains 'cat eye' %}
+                    {% assign healing_benefits = 'Shield | Strength | Success' %}
                   {% elsif product_title_downcase contains 'agate' %}
                     {% assign healing_benefits = 'Balance | Harmony | Protection' %}
                   {% elsif product_title_downcase contains 'malachite' %}

@@ -357,6 +357,12 @@
                   {%- comment %} Sodalite - Clarity & Confidence {%- endcomment -%}
                   {% elsif product_title_downcase contains 'sodalite' %}
                     {% assign healing_benefits = 'Clarity | Confidence | Communication' %}
+                  {%- comment %} Sunstone - Joy & Success {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'sunstone' %}
+                    {% assign healing_benefits = 'Joy | Confidence | Success' %}
+                  {%- comment %} Cat's Eye - Shield & Strength {%- endcomment -%}
+                  {% elsif product_title_downcase contains "cat's eye" or product_title_downcase contains 'cats eye' or product_title_downcase contains 'cat eye' %}
+                    {% assign healing_benefits = 'Shield | Strength | Success' %}
                   {%- comment %} Agate - Balance & Harmony {%- endcomment -%}
                   {% elsif product_title_downcase contains 'agate' %}
                     {% assign healing_benefits = 'Balance | Harmony | Protection' %}
