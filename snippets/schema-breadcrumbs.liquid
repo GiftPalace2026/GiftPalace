@@ -22,12 +22,13 @@
     }
     {%- endif -%}
     {%- if template contains 'product' and product -%}
-      {%- if collection -%}
+      {%- assign current_collection = collection | default: product.collections.first -%}
+      {%- if current_collection -%}
       ,{
         "@type": "ListItem",
         "position": 2,
-        "name": {{ collection.title | json }},
-        "item": "{{ shop.url }}{{ collection.url }}"
+        "name": {{ current_collection.title | json }},
+        "item": "{{ shop.url }}{{ current_collection.url }}"
       }
       ,{
         "@type": "ListItem",

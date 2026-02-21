@@ -1,6 +1,23 @@
-{%- if section.settings.show_product_bundle -%}
-    {% if product.metafields.c_f.grouped_sub_product %}
-        {%- assign handle_metafields =  product.metafields.c_f.grouped_sub_product | split: ',' -%}
+{%- if true -%}{% comment %} Force enabled for demo {% endcomment %}
+    {%- liquid
+        assign handle_metafields = product.metafields.c_f.grouped_sub_product | split: ','
+        
+        # Fallback: If no manual bundle, grab first 3 products from the same collection
+        if handle_metafields == blank
+            assign collection_products = product.collections.first.products
+            assign fallback_handles = ""
+            assign count = 0
+            for prod in collection_products
+                if prod.id != product.id and count < 3
+                    assign fallback_handles = fallback_handles | append: prod.handle | append: ","
+                    assign count = count | plus: 1
+                endif
+            endfor
+            assign handle_metafields = fallback_handles | split: ','
+        endif
+    -%}
+
+    {% if handle_metafields.size > 0 %}
         {%- assign handle_size =  handle_metafields | size -%}
 
         <link rel="stylesheet" href="{{ 'component-product-bundle.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -46,18 +63,31 @@
             #halo-product-bundle{
                 padding-top: {{ padding_top }};
                 padding-bottom: {{ padding_bottom }};
-                background: {{ background_color }};
+                background: #ffffff; /* Clean white background */
+                border-top: 1px solid #e6e6e6;
+                margin-top: 40px;
             }
 
-            #halo-product-bundle .bundle-product-text{
-                color: {{ bundle_discount_text_color }};
+            #halo-product-bundle .halo-block-header .title {
+                text-align: center;
+                font-family: var(--font-heading-family);
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                margin-bottom: 30px;
             }
 
             #halo-product-bundle .bundle-product-action .button{
-                background: {% if total_btn_bg_gradient != blank %}{{ total_btn_bg_gradient }}{% else %}{{ total_btn_bg }}{% endif %};
-                color: {{ total_btn_color }};
-                border-color: {{ total_btn_border }};
+                background: #000000;
+                color: #ffffff;
+                border-color: #000000;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-weight: 600;
             }
+             #halo-product-bundle .bundle-product-action .button:hover{
+                background: #333333;
+                border-color: #333333;
+             }
 
             @media (max-width: 1024px) {
                 #halo-product-bundle{
@@ -96,7 +126,11 @@
                     <div class="halo-block-header">
                         <h3 class="title text-{{ block_title_align }}">
                             <span class="text">
-                                {{ block_title | escape }}
+                                {%- if block_title != blank -%}
+                                    {{ block_title | escape }}
+                                {%- else -%}
+                                    Complete The Look
+                                {%- endif -%}
                             </span>
                         </h3>
                     </div>

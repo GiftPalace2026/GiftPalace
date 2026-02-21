@@ -1,13 +1,24 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "JewelryStore",
   "name": {{ shop.name | json }},
   "url": {{ shop.url | json }},
-  {%- if settings.favicon -%}
-  "logo": {{ settings.favicon | img_url: '512x512' | prepend: 'https:' | json }},
-  {%- endif -%}
+  "image": {{ settings.favicon | img_url: '512x512' | prepend: 'https:' | json }},
   "description": {{ shop.description | default: shop.name | json }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Your Store Street Address",
+    "addressLocality": "Your City",
+    "addressRegion": "Your Region",
+    "postalCode": "110001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "28.6139",
+    "longitude": "77.2090"
+  },
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Customer Service",

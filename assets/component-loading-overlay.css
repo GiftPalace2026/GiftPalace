@@ -23,17 +23,17 @@
     animation: dash 1.4s ease-in-out infinite;
 }
 
-.loading-overlay:not(.hidden) + .cart-item__price-wrapper,
-.loading-overlay:not(.hidden) ~ cart-remove-button {
+.loading-overlay:not(.hidden)+.cart-item__price-wrapper,
+.loading-overlay:not(.hidden)~cart-remove-button {
     opacity: 50%;
 }
 
-.loading-overlay:not(.hidden) ~ cart-remove-button {
+.loading-overlay:not(.hidden)~cart-remove-button {
     pointer-events: none;
     cursor: default;
 }
 
-.loading-overlay--custom{
+.loading-overlay--custom {
     display: none;
     bottom: 0;
     left: 0;
@@ -43,67 +43,82 @@
     background-color: var(--color-background-overylay);
 }
 
-.loading-overlay--custom .loading-overlay__spinner{
+.loading-overlay--custom .loading-overlay__spinner {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    /* Increased size for the gem */
+    height: 60px;
     transform: translate(-50%, -50%);
 }
 
-.loading-overlay--custom .spinner{
+.loading-overlay--custom .spinner {
     width: 100%;
     height: 100%;
+    animation: spin-gem 3s linear infinite;
+    /* Slower, elegant spin */
 }
 
-.is-loading > .loading-overlay{
+/* Keyframes for Gemstone Spin */
+@keyframes spin-gem {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.is-loading>.loading-overlay {
     display: block;
 }
 
-.show_image_loading .card-media.animated-loading{
+.show_image_loading .card-media.animated-loading {
     background: var(--bg-planceholder);
 }
 
-.animated-loading{
+.animated-loading {
     animation-duration: 2.25s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-name: shimmer;
     animation-timing-function: linear;
-    border: none!important;
-    border-radius: 0!important;
+    border: none !important;
+    border-radius: 0 !important;
     background: var(--bg-planceholder);
     background: linear-gradient(to right, var(--bg-planceholder) 4%, #f1f2f3 25%, var(--bg-planceholder) 36%);
     background-size: 2000px 100%;
 }
 
-.animated-loading > span,
-.animated-loading > img{
-    opacity: 0!important;
+.animated-loading>span,
+.animated-loading>img {
+    opacity: 0 !important;
 }
 
-.is-loading.add-to-cart-btn, .is-loading.button{
+.is-loading.add-to-cart-btn,
+.is-loading.button {
     font-size: 0 !important;
     transition: none;
     position: relative;
 }
 
-.is-loading.button svg{
+.is-loading.button svg {
     display: none !important;
 }
 
-.is-loading.button:before{
+.is-loading.button:before {
     opacity: 1;
     visibility: visible;
 }
 
-.button:before{
+.button:before {
     content: '';
     position: absolute;
     top: 50%;
     left: 46%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: inline-block;
     border: 2px solid #f6f6f6;
     border-radius: 50%;
@@ -118,7 +133,7 @@
     visibility: hidden;
 }
 
-.has-halo-loader .loading-overlay--custom{
+.has-halo-loader .loading-overlay--custom {
     display: block;
     position: fixed;
     z-index: 111;
@@ -131,31 +146,31 @@
     visibility: hidden;
 }
 
-.media--loading-effect{
+.media--loading-effect {
     animation-duration: 2.25s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-name: shimmer;
     animation-timing-function: linear;
-    border: none!important;
-    border-radius: 0!important;
+    border: none !important;
+    border-radius: 0 !important;
     background: var(--bg-planceholder);
     background: linear-gradient(to right, var(--bg-planceholder) 4%, #f1f2f3 25%, var(--bg-planceholder) 36%);
     background-size: 2000px 100%;
 }
 
-.show_image_loading .media--loading-effect{
+.show_image_loading .media--loading-effect {
     background: var(--bg-planceholder);
 }
 
-.media--loading-effect > img.lazyload,
-.media--loading-effect > img.lazyloading{
-    opacity: 0!important;
+.media--loading-effect>img.lazyload,
+.media--loading-effect>img.lazyloading {
+    opacity: 0 !important;
 }
 
-.media--loading-effect > img.lazyload ~ .media-loading,
-.media--loading-effect > img.lazyloading ~ .media-loading,
-.card-media--loading .media-loading{
+.media--loading-effect>img.lazyload~.media-loading,
+.media--loading-effect>img.lazyloading~.media-loading,
+.card-media--loading .media-loading {
     display: block;
 }
 
@@ -163,33 +178,42 @@
     background: transparent;
 }
 
-@keyframes spin{
-    0%{
-        transform:translateY(-50%) rotate(0)
+@keyframes spin {
+    0% {
+        transform: translateY(-50%) rotate(0)
     }
-    100%{
-        transform:translateY(-50%) rotate(360deg)
+
+    100% {
+        transform: translateY(-50%) rotate(360deg)
     }
 }
 
 @-webkit-keyframes bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-  }
-  40% {
-    -webkit-transform: scale(1);
-  }
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+    }
 }
 
 @keyframes bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  40% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }
 
 @media (min-width: 768px) {

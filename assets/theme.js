@@ -2707,9 +2707,7 @@
                 const $cartDropdown = $('#halo-cart-sidebar .halo-sidebar-wrapper .previewCart-wrapper');
                 const $cartLoading = '<div class="loading-overlay loading-overlay--custom">\
                         <div class="loading-overlay__spinner">\
-                            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">\
-                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>\
-                            </svg>\
+                            <img src="' + window.gemstoneLoaderUrl + '" class="spinner" alt="Loading..." />\
                         </div>\
                     </div>';
                 const loadingClass = 'is-loading';

@@ -106,6 +106,13 @@
         <div class="halo-collection-content halo-grid-content sidebar--layout_{{ sidebar_type }}">
             {%- if has_sidebar -%}
                 {{ 'component-main-sidebar.css' | asset_url | stylesheet_tag }}
+                
+                {%- comment -%} SEO: Hidden Collection Description for Bots {%- endcomment -%}
+                <div class="seo-collection-data visually-hidden">
+                  <h1>{{ collection.title | escape }}</h1>
+                  <div class="seo-description">{{ collection.description }}</div>
+                </div>
+
                 <div class="page-sidebar page-sidebar-{{ sidebar_position }} page-sidebar--{{ sidebar_type }} sidebar--{{ sidebar_layout }}{% if enable_sticky %} has-sticky{% endif %}" id="halo-sidebar">
                     <a href="javascript:void(0)" class="halo-sidebar-close" data-close-sidebar role="button">
                         <span class="visually-hidden">{{ 'general.common.close' | t }}</span>
@@ -285,11 +292,7 @@
         </div>
     {%- endif -%}
 
-    <div class="loading-overlay loading-overlay--custom">
-        <div class="loading-overlay__spinner">
-            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-            </svg>
-        </div>
-    </div>
+                <div class="loading-overlay__spinner">
+                    <img src="{{ 'gemstone-loader.png' | asset_url }}" class="spinner" alt="Loading..." />
+                </div>
 </div>

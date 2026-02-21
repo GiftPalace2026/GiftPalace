@@ -6345,39 +6345,25 @@ body.is-custom-information .background-overlay {
     padding-top: 0 !important;
 }
 
-/* Product Card Subheading - Luxury Gemstone Style */
+/* Product Card Subheading - Luxury Style (Moon Magic Inspired) */
 .card-subheading,
 .product-subheading {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    font-size: 0.85rem;
-    color: #1a1a1a;
-    margin-top: 10px;
-    margin-bottom: 12px;
-    font-weight: 600;
-    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-    letter-spacing: 0.15em;
+    font-size: 0.7rem;
+    color: #2f2f2f;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     line-height: 1.4;
-    background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%);
-    padding: 8px 14px;
-    border-radius: 2px;
-    border: 1px solid #d4af37;
+    background: transparent;
+    padding: 4px 0;
+    border: none;
     text-align: center;
-    box-shadow: inset 0 1px 0 rgba(212, 175, 55, 0.15);
-    position: relative;
-}
-
-.card-subheading::before,
-.card-subheading::after,
-.product-subheading::before,
-.product-subheading::after {
-    content: '✦';
-    color: #d4af37;
-    font-size: 0.6rem;
-    margin: 0 8px;
-    vertical-align: middle;
 }
 
 /* Zodiac Subheading - Celestial Heirlooms */
@@ -6402,32 +6388,20 @@ body.is-custom-information .background-overlay {
     }
 }
 
-/* Bracelet Subheading - Luxury Gemstone Style */
+/* Bracelet Subheading - Luxury Style (Moon Magic Inspired) */
 .bracelet-subheading {
-    color: #1a1a1a;
-    font-size: 0.85rem;
-    font-weight: 600;
-    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-    letter-spacing: 0.15em;
+    color: #2f2f2f;
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%);
-    padding: 8px 14px;
-    border-radius: 2px;
-    border: 1px solid #d4af37;
-    margin-top: 10px;
-    margin-bottom: 12px;
+    background: transparent;
+    padding: 4px 0;
+    border: none;
+    margin-top: 8px;
+    margin-bottom: 8px;
     text-align: center;
-    box-shadow: inset 0 1px 0 rgba(212, 175, 55, 0.15);
-    position: relative;
-}
-
-.bracelet-subheading::before,
-.bracelet-subheading::after {
-    content: '✦';
-    color: #d4af37;
-    font-size: 0.6rem;
-    margin: 0 8px;
-    vertical-align: middle;
 }
 
 @media (max-width: 767px) {
