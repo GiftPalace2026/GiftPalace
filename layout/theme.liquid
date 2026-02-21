@@ -1,4 +1,5 @@
 <!doctype html>
+{%- render 'seo-optimizer' -%}
 {%- liquid
     if settings.list_iso_rtl != blank
         assign locale_iso_code = request.locale.iso_code
@@ -29,6 +30,7 @@
         <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="dns-prefetch" href="https://www.google-analytics.com">
         <link rel="dns-prefetch" href="https://www.googletagmanager.com">
         
@@ -46,6 +48,7 @@
         {%- comment -%} Structured Data for SEO {%- endcomment -%}
         {% render 'schema-organization' %}
         {% render 'schema-breadcrumbs' %}
+        {% render 'schema-faq' %}
 
         {{ content_for_header }}
 
@@ -53,7 +56,10 @@
         {% render 'global-style' %}
         {% render 'global-script' %}
 
-        <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+        <script>
+          document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+          window.gemstoneLoaderUrl = "{{ 'gemstone-loader.png' | asset_url }}";
+        </script>
 
         {%- liquid
             if settings.layout_header == 'full'

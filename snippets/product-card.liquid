@@ -363,6 +363,15 @@
                   {%- comment %} Cat's Eye - Shield & Strength {%- endcomment -%}
                   {% elsif product_title_downcase contains "cat's eye" or product_title_downcase contains 'cats eye' or product_title_downcase contains 'cat eye' %}
                     {% assign healing_benefits = 'Shield | Strength | Success' %}
+                  {%- comment %} Unakite - Release & Renew {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'unakite' %}
+                    {% assign healing_benefits = 'Release | Renew | Restore' %}
+                  {%- comment %} Smokey Quartz - Grounding & Protection {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'smokey quartz' or product_title_downcase contains 'smoky quartz' %}
+                    {% assign healing_benefits = 'Grounding | Protection | Calm' %}
+                  {%- comment %} Labradorite - Mystic & Power {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'labradorite' %}
+                    {% assign healing_benefits = 'Mystic | Power | Clarity' %}
                   {%- comment %} Agate - Balance & Harmony {%- endcomment -%}
                   {% elsif product_title_downcase contains 'agate' %}
                     {% assign healing_benefits = 'Balance | Harmony | Protection' %}
