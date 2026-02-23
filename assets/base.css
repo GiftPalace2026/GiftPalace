@@ -6613,3 +6613,195 @@ body.is-custom-information .background-overlay {
     }
 }
 
+/* ========================
+   LUXURY HOMEPAGE FONTS
+   ======================== */
+
+/* Homepage Headings - Luxury Style */
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6,
+.title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    color: #1a1a1a !important;
+    letter-spacing: 0.03em !important;
+    line-height: 1.3 !important;
+}
+
+/* Homepage Section Titles */
+.card__heading,
+.heading,
+.section-header__title,
+.collection__title,
+.blog-card__title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: none !important;
+}
+
+/* Hero Banner Titles */
+.banner__heading,
+.hero__title,
+.slide-heading {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.04em !important;
+    color: #1a1a1a !important;
+}
+
+/* Collection Titles */
+.collection-card__title,
+.collection-title,
+.grid-view-item__title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #1a1a1a !important;
+}
+
+/* Product Titles on Homepage */
+.product-card__title,
+.product-card-title,
+.card-information__title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    letter-spacing: 0.06em !important;
+    text-transform: none !important;
+    color: #1a1a1a !important;
+}
+
+/* Price Text */
+.price,
+.price-item,
+.card__price {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    color: #2f2f2f !important;
+    letter-spacing: 0.02em !important;
+}
+
+/* Body Text */
+.rte,
+.rte p,
+.article__excerpt,
+.article__content,
+.content-for-mobile p {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    color: #4a4a4a !important;
+    letter-spacing: 0.02em !important;
+}
+
+/* Navigation / Menu */
+.nav__link,
+.nav-link,
+.menu__link,
+.site-nav__link {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: #1a1a1a !important;
+}
+
+/* Buttons */
+.button,
+.btn,
+.button--primary,
+.button--secondary {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+}
+
+/* Homepage Specific Improvements */
+.collection-wrapper,
+.section-template,
+.main-content {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* Card Text */
+.card-text,
+.card__description {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-size: 13px !important;
+    color: #666666 !important;
+    letter-spacing: 0.02em !important;
+}
+
+/* Badge / Label Text */
+.badge,
+.label,
+.shopify-payment-button__button {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 10px !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+}
+
+/* Footer Text */
+.footer,
+.footer__content,
+.site-footer {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-size: 13px !important;
+    color: #4a4a4a !important;
+    letter-spacing: 0.02em !important;
+}
+
+.footer__title,
+.footer__heading {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: #1a1a1a !important;
+}
+
+/* Newsletter */
+.newsletter__text,
+.newsletter-form__button {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Improve spacing and luxury feel */
+.banner__content,
+.hero__content,
+.slide-content {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* Mobile responsive adjustments for luxury fonts */
+@media (max-width: 767px) {
+    .title,
+    .section-header__title {
+        font-size: 20px !important;
+    }
+
+    .product-card__title,
+    .card__heading {
+        font-size: 12px !important;
+    }
+
+    .button,
+    .btn {
+        font-size: 11px !important;
+        letter-spacing: 0.12em !important;
+    }
+}
+
