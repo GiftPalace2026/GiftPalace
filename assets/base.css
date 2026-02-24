@@ -6340,7 +6340,49 @@ body.is-custom-information .background-overlay {
 /* Remove space between header and banner */
 .halo-banner-adv,
 .halo-banner-image,
-.wrapper-hasbanner-adv {
+.wrapper-hasbanner-adv,
+.banner-section,
+.banner,
+.hero-section,
+.hero,
+.slideshow-wrapper,
+.slideshow,
+.collection-hero,
+.page-width {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Remove gap from main content after header */
+.main-content > .shopify-section:first-child,
+.shopify-section > .banner-section:first-child,
+.shopify-section > .hero-section:first-child {
+    margin-top: 0 !important;
+}
+
+/* Header bottom spacing */
+.header-wrapper {
+    margin-bottom: 0 !important;
+}
+
+.header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Main content top spacing */
+.main-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.content-container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Remove top margin from first section after header */
+.shopify-section:first-of-type {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
