@@ -395,6 +395,97 @@
                   {% assign bracelet_info = healing_benefits %}
                 {% endif %}
 
+                {%- comment %} Necklace Healing Benefits - Women's Focus {%- endcomment -%}
+                {% if product_type_downcase contains 'necklace' or product_type_downcase contains 'pendant' or product_title_downcase contains 'necklace' or product_title_downcase contains 'pendant' %}
+                  {% assign show_necklace_info = true %}
+                  {% assign necklace_healing = '' %}
+
+                  {%- comment %} Rose Quartz - Love & Femininity {%- endcomment -%}
+                  {% if product_title_downcase contains 'rose quartz' or product_title_downcase contains 'rose-quartz' %}
+                    {% assign necklace_healing = 'Self-Love | Emotional Healing | feminine Charm' %}
+                  {%- comment %} Pearl - Purity & Wisdom {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'pearl' %}
+                    {% assign necklace_healing = 'Purity | Wisdom | Inner Light' %}
+                  {%- comment %} Moonstone - Intuition & Feminine {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'moonstone' %}
+                    {% assign necklace_healing = 'Divine Feminine | Intuition | Emotional Balance' %}
+                  {%- comment %} Amethyst - Spiritual Growth {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'amethyst' %}
+                    {% assign necklace_healing = 'Inner Peace | Spiritual Growth | Stress Relief' %}
+                  {%- comment %} Emerald - Love & Fertility {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'emerald' %}
+                    {% assign necklace_healing = 'Love | Fertility | Rebirth' %}
+                  {%- comment %} Ruby - Passion & Confidence {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'ruby' %}
+                    {% assign necklace_healing = 'Passion | Confidence | Vitality' %}
+                  {%- comment %} Sapphire - Wisdom & Clarity {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'sapphire' %}
+                    {% assign necklace_healing = 'Wisdom | Mental Clarity | Spiritual Insight' %}
+                  {%- comment %} Diamond - Strength & Purity {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'diamond' %}
+                    {% assign necklace_healing = 'Inner Strength | Purity | Everlasting Love' %}
+                  {%- comment %} Opal - Creativity & Inspiration {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'opal' %}
+                    {% assign necklace_healing = 'Creativity | Feminine Magic | Inspiration' %}
+                  {%- comment %} Aquamarine - Calm & Communication {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'aquamarine' %}
+                    {% assign necklace_healing = 'Courage | Clear Communication | Soothing Energy' %}
+                  {%- comment %} Garnet - Commitment & Energy {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'garnet' %}
+                    {% assign necklace_healing = 'Devotion | Energy | Commitment' %}
+                  {%- comment %} Citrine - Success & Abundance {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'citrine' %}
+                    {% assign necklace_healing = 'Success | Abundance | Personal Power' %}
+                  {%- comment %} Jade - Luck & Wisdom {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'jade' %}
+                    {% assign necklace_healing = 'Luck | Wisdom | Gentle Energy' %}
+                  {%- comment %} Turquoise - Protection & Healing {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'turquoise' %}
+                    {% assign necklace_healing = 'Protection | Healing | Authentic Expression' %}
+                  {%- comment %} Lapis Lazuli - Truth & Wisdom {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'lapis' %}
+                    {% assign necklace_healing = 'Inner Truth | Wisdom | Self-Expression' %}
+                  {%- comment %} Black Onyx - Protection & Strength {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'onyx' %}
+                    {% assign necklace_healing = 'Inner Strength | Protection | Self-Control' %}
+                  {%- comment %} Amethyst - Calm & Peace {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'amethyst' %}
+                    {% assign necklace_healing = 'Inner Peace | Calm | Spiritual Protection' %}
+                  {%- comment %} Green Aventurine - Luck & Growth {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'green aventurine' or product_title_downcase contains 'aventurine' %}
+                    {% assign necklace_healing = 'Opportunities | Luck | Heart Healing' %}
+                  {%- comment %} Coral - Passion & Vitality {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'coral' %}
+                    {% assign necklace_healing = 'Passion | Vitality | Emotional warmth' %}
+                  {%- comment %} Clear Quartz - Clarity & Energy {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'clear quartz' or product_title_downcase contains 'crystal quartz' %}
+                    {% assign necklace_healing = 'Clarity | Energy Amplification | Spiritual Focus' %}
+                  {%- comment %} Tourmaline - Protection {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'tourmaline' %}
+                    {% assign necklace_healing = 'Protection | Balance | Negative Energy Shield' %}
+                  {%- comment %} Topaz - Love & Passion {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'topaz' %}
+                    {% assign necklace_healing = 'Love | Passion | Creative Expression' %}
+                  {%- comment %} Peridot - Growth & Healing {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'peridot' %}
+                    {% assign necklace_healing = 'Growth | Healing | Renewal' %}
+                  {%- comment %} Labradorite - Mystic Power {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'labradorite' %}
+                    {% assign necklace_healing = 'Mystic Power | Intuition | Transformation' %}
+                  {%- comment %} Smoky Quartz - Grounding {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'smokey quartz' or product_title_downcase contains 'smoky quartz' %}
+                    {% assign necklace_healing = 'Grounding | Emotional Stability | Protection' %}
+                  {%- comment %} Selenite - Cleansing {%- endcomment -%}
+                  {% elsif product_title_downcase contains 'selenite' %}
+                    {% assign necklace_healing = 'Energy Cleansing | Purification | Light Energy' %}
+                  {%- comment %} Default necklace {%- endcomment -%}
+                  {% else %}
+                    {% assign necklace_healing = 'Elegance | Positive Energy | Timeless Beauty' %}
+                  {% endif %}
+
+                  {% assign necklace_info = necklace_healing %}
+                {% endif %}
+
                 {% if show_zodiac %}
                     <div class="product-subheading card-subheading zodiac-subheading">
                         {{ zodiac_dates }}
@@ -402,6 +493,10 @@
                 {% elsif show_bracelet_info and bracelet_info != blank %}
                     <div class="product-subheading card-subheading bracelet-subheading">
                         {{ bracelet_info }}
+                    </div>
+                {% elsif show_necklace_info and necklace_info != blank %}
+                    <div class="product-subheading card-subheading bracelet-subheading">
+                        {{ necklace_info }}
                     </div>
                 {% elsif subheading != blank %}
                     <div class="product-subheading card-subheading">

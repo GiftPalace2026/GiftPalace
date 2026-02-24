@@ -351,6 +351,68 @@
                   {% assign bracelet_info = healing_benefits %}
                 {% endif %}
 
+                {%- comment %} Necklace Healing Benefits - Women's Focus {%- endcomment -%}
+                {% if product_type_downcase contains 'necklace' or product_type_downcase contains 'pendant' or product_title_downcase contains 'necklace' or product_title_downcase contains 'pendant' %}
+                  {% assign show_necklace_info = true %}
+                  {% assign necklace_healing = '' %}
+
+                  {% if product_title_downcase contains 'rose quartz' or product_title_downcase contains 'rose-quartz' %}
+                    {% assign necklace_healing = 'Self-Love | Emotional Healing | Feminine Charm' %}
+                  {% elsif product_title_downcase contains 'pearl' %}
+                    {% assign necklace_healing = 'Purity | Wisdom | Inner Light' %}
+                  {% elsif product_title_downcase contains 'moonstone' %}
+                    {% assign necklace_healing = 'Divine Feminine | Intuition | Emotional Balance' %}
+                  {% elsif product_title_downcase contains 'amethyst' %}
+                    {% assign necklace_healing = 'Inner Peace | Spiritual Growth | Stress Relief' %}
+                  {% elsif product_title_downcase contains 'emerald' %}
+                    {% assign necklace_healing = 'Love | Fertility | Rebirth' %}
+                  {% elsif product_title_downcase contains 'ruby' %}
+                    {% assign necklace_healing = 'Passion | Confidence | Vitality' %}
+                  {% elsif product_title_downcase contains 'sapphire' %}
+                    {% assign necklace_healing = 'Wisdom | Mental Clarity | Spiritual Insight' %}
+                  {% elsif product_title_downcase contains 'diamond' %}
+                    {% assign necklace_healing = 'Inner Strength | Purity | Everlasting Love' %}
+                  {% elsif product_title_downcase contains 'opal' %}
+                    {% assign necklace_healing = 'Creativity | Feminine Magic | Inspiration' %}
+                  {% elsif product_title_downcase contains 'aquamarine' %}
+                    {% assign necklace_healing = 'Courage | Clear Communication | Soothing Energy' %}
+                  {% elsif product_title_downcase contains 'garnet' %}
+                    {% assign necklace_healing = 'Devotion | Energy | Commitment' %}
+                  {% elsif product_title_downcase contains 'citrine' %}
+                    {% assign necklace_healing = 'Success | Abundance | Personal Power' %}
+                  {% elsif product_title_downcase contains 'jade' %}
+                    {% assign necklace_healing = 'Luck | Wisdom | Gentle Energy' %}
+                  {% elsif product_title_downcase contains 'turquoise' %}
+                    {% assign necklace_healing = 'Protection | Healing | Authentic Expression' %}
+                  {% elsif product_title_downcase contains 'lapis' %}
+                    {% assign necklace_healing = 'Inner Truth | Wisdom | Self-Expression' %}
+                  {% elsif product_title_downcase contains 'onyx' %}
+                    {% assign necklace_healing = 'Inner Strength | Protection | Self-Control' %}
+                  {% elsif product_title_downcase contains 'green aventurine' or product_title_downcase contains 'aventurine' %}
+                    {% assign necklace_healing = 'Opportunities | Luck | Heart Healing' %}
+                  {% elsif product_title_downcase contains 'coral' %}
+                    {% assign necklace_healing = 'Passion | Vitality | Emotional Warmth' %}
+                  {% elsif product_title_downcase contains 'clear quartz' or product_title_downcase contains 'crystal quartz' %}
+                    {% assign necklace_healing = 'Clarity | Energy Amplification | Spiritual Focus' %}
+                  {% elsif product_title_downcase contains 'tourmaline' %}
+                    {% assign necklace_healing = 'Protection | Balance | Negative Energy Shield' %}
+                  {% elsif product_title_downcase contains 'topaz' %}
+                    {% assign necklace_healing = 'Love | Passion | Creative Expression' %}
+                  {% elsif product_title_downcase contains 'peridot' %}
+                    {% assign necklace_healing = 'Growth | Healing | Renewal' %}
+                  {% elsif product_title_downcase contains 'labradorite' %}
+                    {% assign necklace_healing = 'Mystic Power | Intuition | Transformation' %}
+                  {% elsif product_title_downcase contains 'smokey quartz' or product_title_downcase contains 'smoky quartz' %}
+                    {% assign necklace_healing = 'Grounding | Emotional Stability | Protection' %}
+                  {% elsif product_title_downcase contains 'selenite' %}
+                    {% assign necklace_healing = 'Energy Cleansing | Purification | Light Energy' %}
+                  {% else %}
+                    {% assign necklace_healing = 'Elegance | Positive Energy | Timeless Beauty' %}
+                  {% endif %}
+
+                  {% assign necklace_info = necklace_healing %}
+                {% endif %}
+
                 {%- if show_zodiac -%}
                     <div class="product-subheading card-subheading zodiac-subheading">
                         {{ zodiac_dates }}
@@ -358,6 +420,10 @@
                 {% elsif show_bracelet_info and bracelet_info != blank %}
                     <div class="product-subheading card-subheading bracelet-subheading">
                         {{ bracelet_info }}
+                    </div>
+                {% elsif show_necklace_info and necklace_info != blank %}
+                    <div class="product-subheading card-subheading bracelet-subheading">
+                        {{ necklace_info }}
                     </div>
                 {%- elsif subheading != blank -%}
                     <div class="card-subheading">
